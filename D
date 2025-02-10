@@ -1,0 +1,32 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        
+        string senhaCorreta = "senha123";
+        
+       
+        int tentativas = 3;
+
+    
+        for (int i = 1; i <= tentativas; i++)
+        {
+            Console.Write("Digite a senha: ");
+            string senhaUsuario = Console.ReadLine();
+
+           
+            if (senhaUsuario == senhaCorreta)
+            {
+                Console.WriteLine("Senha correta! Acesso concedido.");
+                return; // Encerra o programa se a senha for correta
+            }
+            else
+            {
+                Console.WriteLine("Senha incorreta. Você tem {0} tentativas restantes.", tentativas - i);
+            }
+        }
+
+       
+        Console.WriteLine("Você excedeu o nú
