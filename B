@@ -1,0 +1,19 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Solicitar ao usuário para inserir um número inteiro
+        Console.Write("Por favor, insira um número inteiro: ");
+        int numero = Convert.ToInt32(Console.ReadLine());
+
+        // Exibir a tabuada desse número até o número 10
+        Console.WriteLine("Tabuada do número " + numero + ":");
+        for (int i = 1; i <= 10; i++)
+        {
+            int resultado = numero * i;
+            Console.WriteLine(numero + " x " + i + " = " + resultado);
+        }
+    }
+}
