@@ -1,0 +1,28 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Solicitar ao usuário para inserir um número inteiro positivo
+        Console.Write("Por favor, insira um número inteiro positivo: ");
+        int numero = Convert.ToInt32(Console.ReadLine());
+
+        // Verificar se o número é positivo
+        if (numero < 0)
+        {
+            Console.WriteLine("Por favor, insira um número positivo.");
+            return;
+        }
+
+        // Exibir os números pares entre 0 e o número inserido
+        Console.WriteLine("Números pares entre 0 e " + numero + ":");
+        for (int i = 0; i <= numero; i++)
+        {
+            if (i % 2 == 0) // Verifica se o número é par
+            {
+                Console.WriteLine(i);
+            }
+        }
+    }
+}
