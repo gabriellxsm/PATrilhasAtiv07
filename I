@@ -1,0 +1,43 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int soma = 0;
+        string entrada;
+
+        Console.WriteLine("Digite uma sequência de números inteiros. Digite 'fim' para terminar.");
+
+        while (true)
+        {
+           
+            Console.Write("Digite um número: ");
+            entrada = Console.ReadLine();
+
+          
+            if (entrada.ToLower() == "fim")
+            {
+                break;
+            }
+
+            int numero;
+            if (int.TryParse(entrada, out numero))
+            {
+             
+                soma += numero;
+            }
+            else
+            {
+              
+                Console.WriteLine("Por favor, insira um número válido.");
+            }
+        }
+
+     
+        Console.WriteLine($"A soma dos números inseridos é: {soma}");
+
+       
+        Console.ReadKey();
+    }
+}
