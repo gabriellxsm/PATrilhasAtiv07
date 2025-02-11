@@ -1,0 +1,33 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int numero, soma = 0;
+
+     
+        Console.WriteLine("Digite números inteiros. O programa vai somar os números até que um número negativo seja inserido.");
+
+        while (true)
+        {
+          
+            Console.Write("Digite um número: ");
+            numero = int.Parse(Console.ReadLine());
+
+            if (numero < 0)
+            {
+                break;
+            }
+
+          
+            soma += numero;
+        }
+
+        
+        Console.WriteLine($"A soma dos números inseridos é: {soma}");
+
+       
+        Console.ReadKey();
+    }
+}
