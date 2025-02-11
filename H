@@ -1,0 +1,32 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Digite um número inteiro: ");
+        
+  
+        int numero;
+        
+
+        if (int.TryParse(Console.ReadLine(), out numero))
+        {
+            
+            Console.WriteLine($"Tabuada de {numero}:");
+            for (int i = 1; i <= 10; i++)
+            {
+                int resultado = numero * i;
+                Console.WriteLine($"{numero} x {i} = {resultado}");
+            }
+        }
+        else
+        {
+       
+            Console.WriteLine("Por favor, insira um número inteiro válido.");
+        }
+
+ 
+        Console.ReadKey();
+    }
+}
